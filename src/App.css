@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,body {
+  width: 100%;
+  overscroll-behavior: none;
+  min-height: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body::-webkit-scrollbar {
+  display: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1 { 
+  font-size: 5rem; 
+  font-family: 'Bebas Neue';
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  margin: 0;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+  margin: 0 auto;
+}
+.gallery {
+  height: 200vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.img {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  background-size: cover;
+  z-index: -1;
+
+  &:nth-of-type(1) {background-image: url('https://assets.codepen.io/2621168/img1.jpg');}
+  &:nth-of-type(2) {background-image: url('https://assets.codepen.io/2621168/img1.jpg');}
+  &:nth-of-type(3) {background-image: url('https://assets.codepen.io/2621168/img1.jpg');}
+  &:nth-of-type(4) {background-image: url('https://assets.codepen.io/2621168/img1.jpg');}
+  &:nth-of-type(5) {background-image: url('https://assets.codepen.io/2621168/img1.jpg');}
+  &:nth-of-type(6) {background-image: url('https://assets.codepen.io/2621168/img1.jpg');}
+  &:nth-of-type(7) {background-image: url('https://assets.codepen.io/2621168/img1.jpg');}
+  &:nth-of-type(8) {background-image: url('https://assets.codepen.io/2621168/img1.jpg');}
+  &:nth-of-type(9) {background-image: url('https://assets.codepen.io/2621168/img1.jpg');}
+
+
+  &:before {
+      content: '';
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      z-index: 4;
+      top: 0;
+      left: 0;
+      border-right: 1px solid black;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.line {
+  border-right: 1px solid black;
 }
